@@ -1,0 +1,211 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Backend_MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>後台管理系統</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=big5" />
+    <link href="~/App_Themes/Default/Default.css" rel="stylesheet" type="text/css" />
+    <link href="Backend.css" rel="stylesheet" type="text/css" />
+
+    <%--載入JQUERY--%>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css" />
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+
+    <%--MENU使用--%>
+    <link href="~/App_Themes/Default/newMenu.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="~/JavaScript/jquery.js"></script>
+    <script type="text/javascript" src="~/JavaScript/menu.js"></script>
+
+     <%--繁簡體轉換--%>
+    <script src="../JavaScript/WFU-ts-mix.js" type="text/javascript"></script>
+    <script type="text/javascript" language="javascript">
+        function getCookie(key) {
+            if (document.cookie.length == 0)
+                return false;
+            var i = document.cookie.search(key + '=');
+            if (i == -1)
+                return false;
+            i += key.length + 1;
+            var j = document.cookie.indexOf(';', i);
+            if (j == -1)
+                j = document.cookie.length;
+            return document.cookie.slice(i, j);
+        }
+
+        function TS_Switch2() {
+            var Lang = getCookie("Lang");
+            if (Lang == "SC") {
+                TS_Switch();
+            }
+        }
+
+        function displayCookies() {
+            var Lang = getCookie("Lang");
+            alert(Lang);
+        }
+    </script>
+
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="Body">
+    <form id="form1" runat="server">
+
+    <asp:ScriptManager id="ScriptManager" runat="server"/> 
+
+    <div id="wrap">
+        <div id="header">
+
+        <table  border="0" cellpadding="0" cellspacing="0" width="1003px" style="height: 130px">
+         <tr>
+                    <td align="left" colspan="2">
+                        </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="right" colspan="2">
+                        &nbsp;</td>
+                </tr>
+                 <tr height='40px'>
+                    <td align="left" bgcolor="Black" width="85%">
+<%--新MENU--%>
+<div id="newmenu">
+    <ul class="newmenu">
+        <%-- 1--%>
+        <li><a href="MainIndex.aspx" class="parent"><span>首頁</span></a>
+        </li>
+    
+        <%-- 2--%>
+        <li><a href="#" class="parent"><span>最新消息管理</span></a>
+            <div>
+            <ul>
+                <li><a href="MANAGE_NewsList.aspx"><span>最新消息上架</span></a></li>
+            </ul>
+            </div>
+        </li>
+
+        <%-- 3--%>
+        <li><a href="#" class="parent"><span>商品管理</span></a>
+            <div>
+            <ul>
+                <li><a href="MANAGE_ProductList.aspx"><span>商品上架</span></a></li>
+            </ul>
+            </div>
+        </li>
+    
+         <%-- 4--%>
+         <li><a href="#" class="parent"><span>訂單管理</span></a>
+            <div>
+            <ul>
+                <li><a href="ORDER_RecordList.aspx"><span>訂單查詢</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="REPORT_RecordMonth.aspx"><span>月報表查詢</span></a></li>
+            </ul>
+            </div>
+        </li>
+
+       <%-- Item4--%>
+     <%--   <li><a href="#" class="parent"><span>網站內容管理</span></a>
+            <div>
+            <ul>
+                <li><a href="MANAGE_ArticleList.aspx"><span>品牌故事</span></a></li>
+            </ul>
+            </div>
+        </li>--%>
+
+       <%-- Item5--%>
+    <%--    <li><a href="#" class="parent"><span>留言管理</span></a>
+            <div>
+            <ul>
+                <li><a href="MANAGE_MessageList.aspx"><span>留言查詢</span></a></li>
+            </ul>
+            </div>
+        </li>--%>
+
+        <%-- Item6--%>
+      <%--  <li><a href="#" class="parent"><span>希望清單管理</span></a>
+            <div>
+            <ul>
+                <li><a href="#"><span>希望清單查詢</span></a></li>
+            </ul>
+            </div>
+        </li>--%>
+
+       <%-- 5--%>
+         <li><a href="#" class="parent"><span>系統設定</span></a>
+            <div>
+            <ul>
+                <li><a href="ORDER_FareList.aspx"><span>運費設定</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="ORDER_RateList.aspx"><span>匯率設定</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="System_ExceptionList.aspx"><span>系統錯誤查詢</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="System_EventList.aspx"><span>系統事件查詢</span></a></li>
+            </ul>
+            </div>
+        </li>
+
+        <%-- 6--%>
+         <li><a href="#" class="parent"><span>使用者管理</span></a>
+            <div>
+            <ul>
+                <li><a href="System_UserList.aspx"><span>帳號管理</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="System_RoleList.aspx"><span>群組權限管理</span></a></li>
+            </ul>
+            <ul>
+                <li><a href="System_Password.aspx"><span>個人密碼修改</span></a></li>
+            </ul>
+            </div>
+        </li>
+
+        <%-- 7--%>
+        <li><a href="Logout.aspx" class="parent"><span>登出</span></a>
+        </li>
+
+    </ul>
+ </div>
+<a href="http://apycom.com/"></a>
+
+                    </td>
+                    <td align="right"  bgcolor="Black" width="15%" valign="bottom">
+                        <asp:Label ID="lblUser" runat="server" ForeColor="White" Font-Size="XX-Small"></asp:Label>
+                        &nbsp;</td>
+                </tr>
+            </table>
+      </div>
+     
+   
+
+
+        <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+        <td style=" vertical-align:top; width:1000px">   
+
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+
+
+        </td>
+        </tr>
+        </table>
+
+    </div>
+
+
+    </form>
+</body>
+</html>
