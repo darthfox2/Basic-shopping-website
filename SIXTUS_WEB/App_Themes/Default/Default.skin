@@ -1,0 +1,74 @@
+﻿<%--
+預設面板範本。下列面板僅提供做為範例的用途。
+
+1. 具名控制面板。SkinId 應為唯一定義，因為在相同主題中，一個控制項型別不能具有重複的 SkinId。
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. 預設面板。SkinId 未定義。在相同主題中，每個控制項型別只能有一個預設控制面板。
+
+<asp:Image runat="server" ImageUrl="images/image1.jpg" />
+--%>
+
+<asp:Menu SkinID="MenuBar" runat="server" ForeColor="#000000">
+    <StaticMenuStyle HorizontalPadding="4px" />
+    <StaticMenuStyle HorizontalPadding="4px" />
+    <DynamicMenuStyle BackColor="#edecec" />
+    <DynamicMenuItemStyle ItemSpacing="4px" VerticalPadding="2px" HorizontalPadding="10px" />    
+</asp:Menu>
+
+<%--主版面字型風格(一般內文)--%>
+<asp:Label SkinID="MainText" runat="server" Font-Size="12px" ForeColor="Black"></asp:Label>
+
+<%--主版面字型風格(一般標題)--%>
+<asp:Label SkinID="MainSubject" runat="server" Font-Size="12px" ForeColor="Black" Font-Bold="True"></asp:Label>
+
+<%--主版面字型風格(警告)--%>
+<asp:Label SkinID="MainWarn" runat="server" Font-Size="12px" ForeColor="Red" ></asp:Label>
+
+<%--主版面字型風格(警告)--%>
+<asp:RequiredFieldValidator SkinID="MainWarn" runat="server" Font-Size="12px" ForeColor="Red" ></asp:RequiredFieldValidator>
+
+<%--主版面字型風格(提示)--%>
+<asp:Label SkinID="MainAlert" runat="server" Font-Size="12px" ForeColor="#406990"></asp:Label>
+
+
+<%--超連結字型風格--%>
+<asp:HyperLink SkinID="Link" runat="server" Font-Size="12px" ForeColor="Blue" ></asp:HyperLink>
+
+
+<%--勾選按鈕字型風格(一般標題)--%>
+<asp:CheckBox SkinID="MainSubject" runat="server" Font-Size="12px" ForeColor="Black" Font-Bold="True"></asp:CheckBox>
+
+
+<%--按鈕的風格設定(共用)--%>
+<asp:Button runat="server" Font-Size="12px" BackColor="#EEEEEE"></asp:Button>
+
+<%--按鈕的風格設定(分頁控制項)--%>
+<asp:Button SkinID="PageButton" runat="server" Font-Size="12px" BackColor="#E4ECEF"></asp:Button>
+
+<%--按鈕的風格設定(Grid內)--%>
+<asp:Button SkinID="GridButton" runat="server" Font-Size="12px" BackColor="#BFE3D5" Width="60px"></asp:Button>
+
+
+<%--GridView的風格設定(共用)--%>
+<asp:GridView runat="server" AutoGenerateColumns="False" Width="100%" Font-Size="12px" BorderColor="#666666">
+    <EmptyDataTemplate>
+        沒有資料可以顯示<br />
+    </EmptyDataTemplate>
+    <RowStyle BackColor="White" ForeColor="Black" Height="20px" />
+    <HeaderStyle BackColor="#2e2e2e" ForeColor="White" Height="24px" />
+    <%--<Columns><asp:BoundField>    <ItemStyle BorderColor="#666666" />    </asp:BoundField></Columns>--%>
+    <AlternatingRowStyle BackColor="#f0f0f0" ForeColor="Black" Height="20px" />
+    <PagerTemplate>
+        &nbsp;
+    </PagerTemplate>
+    <PagerSettings Mode="NumericFirstLast" Visible="False" />
+</asp:GridView>               
+
+<%--GridView分頁字型風格--%>
+<asp:Label SkinID="Page" runat="server" Font-Size="12px"></asp:Label>
+
+

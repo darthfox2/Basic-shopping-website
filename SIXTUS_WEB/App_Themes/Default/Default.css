@@ -1,0 +1,179 @@
+﻿/*登入頁面-----------------------------------------------------------------------------------*/
+#login
+{
+
+	background-repeat: no-repeat;
+	width: 800px;
+	height: 600px;
+	margin: 0px auto;
+}
+
+/*網站版面風格--------------------------------------------------------------------------------*/
+
+/* 整個網站風格 */
+.Body 
+{
+    font-size: 10pt;		
+	font-family: Verdana;
+    background-position:center 0px;
+	background-image: url(images/main_bg.jpg);
+	background-repeat: repeat-y;
+    background-color: #f4f4f4;
+    margin: 0px;
+    text-align: center;
+}
+
+/* 控制內容的表現區域 */
+#wrap
+{
+	margin: 0px auto!important;
+	width: 1003px;
+	background-color: white;
+
+}
+
+/*落款區塊-----------------------------------------------------------------------------------*/
+
+#footer
+{
+	background-image: url(images/footer.jpg);
+	background-repeat: no-repeat;
+	width: 983px;
+	height: 35px;
+	padding-left: 20px;
+	padding-top: 15px;
+	clear:both;
+	text-align: left;
+}
+
+
+/*內容區塊-----------------------------------------------------------------------------------*/
+
+#title
+{
+	background-image: url(images/titlebg.jpg);
+	background-repeat: no-repeat;
+	height: 35px;
+	text-align: left;
+	width: 100%;
+	margin: 0px;
+	padding: 15px 0px 0px 0px;
+	text-indent: 35px;
+}
+
+/* 內容頁風格 */
+.ContentBody 
+{
+        font-family: "Helvetica Neue", Helvetica, Arial, "微軟正黑體", sans-serif;
+		font-size: .875em;
+		letter-spacing:1px;
+	    line-height: 1.6em;
+		background: #fff;
+		color: #666;
+    background-repeat: no-repeat;
+    background-color: White;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/*按鈕-----------------------------------------------------------------------------------*/
+
+/* 所有按鈕風格 */
+.Button
+{
+	background-repeat: no-repeat;
+	cursor: hand;
+}
+
+/* 內容較短按鈕 */
+.SmallButton
+{
+	color: #FFF;
+	width: 60px;
+	height: 25px;
+	padding-top: 2px;
+	background-image: url(images/button01.gif);
+	background-repeat: no-repeat;
+	cursor: hand;
+	background-color:Transparent;
+	border:0px;
+}
+
+/* 內容較長按鈕 */
+.BigButton
+{
+	color: #FFF;
+	width: 100px;
+	height: 25px;
+	padding-top: 3px;
+	background-image: url(images/button02.gif);
+	background-repeat: no-repeat;
+	cursor: hand;
+	background-color:Transparent;
+	border:0px;
+}
+
+/* 付款按鈕 */
+.PayButton
+{
+	color: #FFF;
+	width: 100px;
+	height: 25px;
+	padding-top: 3px;
+	background-image: url(images/button03.gif);
+	background-repeat: no-repeat;
+	cursor: hand;
+	background-color:Transparent;
+	border:0px;
+}
+
+
+/*圓角===========================================================================================*/
+
+.corner {background: transparent; width:95%; margin:0 auto;}
+
+.corner .top, .corner .bottom {display:block; background:transparent; font-size:1px;}
+.corner .b1, .corner .b2, .corner .b3, .corner .b4, .corner .b1b, .corner .b2b, .corner .b3b, .corner .b4b {display:block; overflow:hidden;}
+.corner .b1, .corner .b2, .corner .b3, .corner .b1b, .corner .b2b, .corner .b3b {height:1px;}
+.corner .b2 {background:#D9EBE8; border-left:1px solid #BADCE7; border-right:1px solid #BADCE7;}
+.corner .b3 {background:#D9EBE8; border-left:1px solid #BADCE7; border-right:1px solid #AECBD4;}
+.corner .b4 {background:#D9EBE8; border-left:1px solid #BADCE7; border-right:1px solid #90B9C6;}
+.corner .b4b {background:#D9EBE8; border-left:1px solid #BADCE7; border-right:1px solid #999;}
+.corner .b3b {background:#D9EBE8; border-left:1px solid #AECBD4; border-right:1px solid #999;}
+.corner .b2b {background:#D9EBE8; border-left:1px solid #90B9C6; border-right:1px solid #999;}
+
+
+.corner .b1 {margin:0 5px; background:#BADCE7;}
+.corner .b2, .corner .b2b {margin:0 3px; border-width:0 2px;}
+.corner .b3, .corner .b3b {margin:0 2px;}
+.corner .b4, .corner .b4b {height:2px; margin:0 1px;}
+.corner .b1b {margin:0 5px; background:#90B9C6;}
+.corner .boxcontent{display: block; background: #D9EBE8; border-left: 1px solid #BADCE7; border-right: 1px solid #90B9C6; padding: 0.5em 1.5em; font-family: Arial, Helvetica, sans-serif;}
+
+
+/*圓角(下單列)===========================================================================================*/
+
+.cornerOL {background: transparent; width:100%; margin:0 auto;}
+
+.cornerOL .top, .cornerOL .bottom {display:block; background:transparent; font-size:1px;}
+.cornerOL .b1, .cornerOL .b2, .cornerOL .b3, .cornerOL .b4, .cornerOL .b1b, .cornerOL .b2b, .cornerOL .b3b, .cornerOL .b4b {display:block; overflow:hidden;}
+.cornerOL .b1, .cornerOL .b2, .cornerOL .b3, .cornerOL .b1b, .cornerOL .b2b, .cornerOL .b3b {height:1px;}
+.cornerOL .b2 {background:#CCCCCC; border-left:1px solid #000000; border-right:1px solid #000000;}
+.cornerOL .b3 {background:#CCCCCC; border-left:1px solid #000000; border-right:1px solid #000000;}
+.cornerOL .b4 {background:#CCCCCC; border-left:1px solid #000000; border-right:1px solid #000000;}
+.cornerOL .b4b {background:#CCCCCC; border-left:1px solid #000000; border-right:1px solid #000000;}
+.cornerOL .b3b {background:#CCCCCC; border-left:1px solid #000000; border-right:1px solid #000000;}
+.cornerOL .b2b {background:#CCCCCC; border-left:1px solid #000000; border-right:1px solid #000000;}
+
+
+.cornerOL .b1 {margin:0 5px; background:#000000;}
+.cornerOL .b2, .cornerOL .b2b {margin:0 3px; border-width:0 2px;}
+.cornerOL .b3, .cornerOL .b3b {margin:0 2px;}
+.cornerOL .b4, .cornerOL .b4b {height:2px; margin:0 1px;}
+.cornerOL .b1b {margin:0 5px; background:#000000;}
+.cornerOL .boxcontent{display: block; background: #CCCCCC; border-left: 1px solid #000000; border-right: 1px solid #000000; padding: 0.5em 1.5em; font-family: Arial, Helvetica, sans-serif;}
+
+
